@@ -1,1 +1,30 @@
+# 🏦 TryHackMe - FakeBank Room
+📅 Completed on: 17 July 2025  
+🛠️ Tools Used:  
+- Firefox DevTools  
+- gobuster  
+- Linux Terminal (TryHackMe machine)
+
+🔍 What I Learned
+
+- Default credentials se admin panel ka access mil sakta hai.
+- POST request ko tamper karke sensitive action perform karna possible hota hai.
+- Error messages jaise `"Send from account does not exist"` se internal logic samajh aata hai (Information Disclosure).
+- Input validation missing hone se form me invalid data se bhi backend interact kar jata hai.
+
+---
+ 🧪 Payloads & Actions
+- Tried default credentials like:  
+  `Username: admin`  
+  `Password: admin`  
+- Sent manipulated POST request to `/bank-transfer`:  
+  ```http
+  POST /bank-transfer HTTP/1.1
+  Content-Type: application/x-www-form-urlencoded
+
+  from=000123456&to=000654321&amount=$2000
+
+
+
+
 
