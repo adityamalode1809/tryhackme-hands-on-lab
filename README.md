@@ -1,3 +1,3 @@
 # tryhackme-hands-on-lab
-this is my first Git  repository
+This is My First Git  Repository
 Author Aditya Malode 
